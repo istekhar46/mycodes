@@ -6,11 +6,12 @@ class scal
     int a, b;
 
 public:
-    // void setdata(int v1, int v2)
-    // {
-    //     a = v1;
-    //     b = v2;
-    // }
+
+    void setdata(int v1, int v2)
+    {
+        a = v1;
+        b = v2;
+    }
     // void display(void)
     // {
     //     cout << "the result " << a << " + " << b << endl;
@@ -48,6 +49,7 @@ public:
         return c;
     }
 };
+ 
 
 class scical:public scal{
     int a,b;
@@ -62,7 +64,7 @@ class scical:public scal{
     int power (int x ,int y){
           a=x;
           b=y;
-        int c=pow(a,b);
+     double c=pow(a,b);
         cout<<"the power of number is "<<c<<endl;
         return c;
     }
@@ -116,7 +118,10 @@ int main()
         cout << "Enter a valid number" << endl;
     }
    scical m2;
-  cout<<"\nEnter 1 for squaroot \nEnter 2 for power of number"<<endl;
+    double sum=0;
+    int number,i;
+    
+  cout<<"\nEnter 1 for squaroot \nEnter 2 for power of number\nEnter 3 for addition"<<endl;
   cin>>f;
   if (f==1){
     cout<<"Enter the number "<<endl;
@@ -130,6 +135,23 @@ int main()
     cin>>d;
     m2.power(c,d);
   }
+
+else if (f==3){
+    cout<<"Enter the first number "<<endl;
+    cin>>c;
+    cout<<"'Enter the second number "<<endl;
+    cin>>d;
+    m2.add(c,d);
+  
+//     cout<<"Enter the first five numbers  to add"<<endl;
+//    for (i=0;i<5;i++){
+//     cout<<"Enter the  number "<<i+1<<endl;
+//     cin>>number;
+//     sum+=number;
+//    }
+ 
+//        cout<<"the addition of your numbers is "<<sum<<endl;
+}
 
 
     return 0;
