@@ -51,7 +51,7 @@ public:
 };
  
 
-class scical:public scal{
+class scical{
     int a,b;
     public:
     int sqaroot ( int x ){
@@ -69,14 +69,29 @@ class scical:public scal{
         return c;
     }
 
+    int trignometry(int k, int j){
+        a=k;
+        b=j;
+        cout<<"the value of sin(a) and sin(b) is "<<sin(a)<<" , "<<sin(b)<<"\n"
+            <<"the value of cos(a) and cos(b) is "<<cos(a)<<" , "<<cos(b)<<"\n"
+            <<"the value of tan(a) and tan(b) is "<<tan(a)<<" , "<<tan(b)<<endl;
+    }
+
+
+    
+
 };
+    class hybridcal:public scal, public scical{};
+
+
+
 int main()
 {
-    scal m1;
+    hybridcal m1;
  
     int c,d,e,f;
  
-    cout << "Enter 1 for addition \nEnter 2 for substraction\nEnter 3 for multiplicatiion\nEnter 4 for division\nEnter 5 for skip" << endl;
+    cout << "Enter 1 for addition \nEnter 2 for substraction\nEnter 3 for multiplicatiion\nEnter 4 for division\nEnter 5 for scientific calculation" << endl;
     cin >> e;
     if (e == 1)
     {
@@ -101,6 +116,7 @@ int main()
         cout << "Enter the values 2" << endl;
         cin >> d;
         m1.mul(c, d);
+    
     }
     else if (e == 4)
     {
@@ -111,37 +127,39 @@ int main()
         m1.division(c, d);
     }
     else if (e==5){
-        cout<<"<<<<the Simple calculator is skipped>>>>"<<endl;
+        cout<<"<<<< Now you are in scientific calculator >>>>"<<endl;
     }
     else
     {
         cout << "Enter a valid number" << endl;
     }
-   scical m2;
-    double sum=0;
-    int number,i;
+  cout<<" now you are in scientific calculator "<<endl;
+
+    // double sum=0;
+    // int number,i;
     
-  cout<<"\nEnter 1 for squaroot \nEnter 2 for power of number\nEnter 3 for addition"<<endl;
+  cout<<"\nEnter 1 for squaroot \nEnter 2 for power of number \nEnter 3 for trignomerric values "<<endl;
   cin>>f;
   if (f==1){
     cout<<"Enter the number "<<endl;
     cin>>c;
-   m2.sqaroot(c);
+   m1.sqaroot(c);
   }
   else if(f==2){
     cout<<"Enter the number "<<endl;
     cin>>c;
     cout<<"Enter the power of number "<<endl;
     cin>>d;
-    m2.power(c,d);
+    m1.power(c,d);
   }
 
 else if (f==3){
-    cout<<"Enter the first number "<<endl;
+     cout<<"Enter the value of (a)"<<endl;
     cin>>c;
-    cout<<"'Enter the second number "<<endl;
+    cout<<"Enter the value of (b) "<<endl;
     cin>>d;
-    m2.add(c,d);
+    m1.trignometry(c,d);
+}
   
 //     cout<<"Enter the first five numbers  to add"<<endl;
 //    for (i=0;i<5;i++){
@@ -151,7 +169,7 @@ else if (f==3){
 //    }
  
 //        cout<<"the addition of your numbers is "<<sum<<endl;
-}
+
 
 
     return 0;
