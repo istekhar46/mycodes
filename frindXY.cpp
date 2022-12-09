@@ -49,10 +49,11 @@ X add(X o2, X o3)
 
 int main()
 {
-    X a1, c1, sum;
+    X a1, c1,sum;
     a1.setdata(2);
     c1.setdata(4);
-    sum = add(a1, c1);
+   sum = add(a1, c1);
+    
         // sum.getdata();
 
     Y b1;

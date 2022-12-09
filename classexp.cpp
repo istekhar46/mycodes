@@ -44,7 +44,6 @@ int main()
     myObj.myString = "name of institude is ABESIT";
     myObj.studentfees();
     myObj.mynum="marks obtain total in 55 is ";
-    // Print values
     cout<<myObj.mynum;
     cout << myObj.myNum << "\n";
     cout << myObj.myString<<endl;

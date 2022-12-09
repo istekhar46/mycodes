@@ -1,2 +1,2 @@
- // double sum=0;
-    // int number,i;
+ // basepointer->varBase=46;
+    // basepointer->getdata();
